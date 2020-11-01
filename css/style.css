@@ -81,12 +81,16 @@ body {
 }
 .container .content {
   flex: 3;
-  display: flex;
   flex-direction: column;
   overflow: scroll;
+  overflow-x: hidden;
 }
 .container .content div {
   box-sizing: border-box;
+}
+.container .content .contact {
+  display: flex;
+  flex-direction: column;
 }
 .container .content .upperabout {
   flex: 1;
@@ -97,12 +101,10 @@ body {
   flex: 6;
 }
 .container .content .upperabout .upper-left .upperavatar {
-  height: 100%;
   background: #eee;
 }
 .container .content .upperabout .upper-left .upperavatar img {
-  width: 100%;
-  object-fit: fill;
+  max-width: 100%;
 }
 .container .content .upperabout .upper-right {
   flex: 5;
@@ -269,9 +271,13 @@ body {
   .container .sidebar .copyright {
     display: none;
   }
+  .container .content {
+    overflow: hidden;
+  }
   .container .content .pricing {
     display: flex;
     flex-direction: column;
+    gap: 3rem;
   }
   .container .content .pricing .price {
     width: 90%;
@@ -319,7 +325,7 @@ body {
     font-size: 3vw;
   }
   .container .content .contact-box .contact-field {
-    width: 50vw;
+    width: 90vw;
   }
 }
 
