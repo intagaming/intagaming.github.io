@@ -1,0 +1,413 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+}
+
+
+.container {
+  display: flex;
+  width: 80vw;
+  height: 80vh;
+  margin: 10vh 10vw;
+  gap: 1vw;
+
+  .sidebar {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: #eee;
+    padding: 1rem;
+
+    .infobox {
+      display: flex;
+      flex: 2;
+      flex-direction: column;
+      text-align: center;
+      line-height: 1.3rem;
+      padding: 10px 0;
+      margin-bottom: 1rem;
+
+      img {
+        width: 30%;
+        margin: 0 auto;
+      }
+
+      h2 {
+        padding-top: 0.8rem;
+        font-size: 1.7vw;
+        line-height: 2vw;
+      }
+
+      p {
+        font-size: 1.3vw;
+        line-height: 2vw;
+      }
+    }
+
+    .menu {
+      flex: 5;
+      display: grid;
+      padding: 0 1.4vw;
+      grid-template-columns: 1fr 1fr;
+      align-self: center;
+
+      .tab {
+        text-align: center;
+        margin: auto;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        .tab-icon {
+          margin: auto;
+          font-size: 4vh;
+          padding: 0.3rem 1rem;
+        }
+
+        p {
+          padding-top: 0.3rem;
+          font-size: 1.2vw;
+        }
+      }
+
+      .tab-icon {
+        opacity: 33%;
+      }
+
+      .active .tab-icon {
+        opacity: 100%;
+      }
+    }
+
+    .copyright {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2vw;
+    }
+  }
+
+  .content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+
+    div {
+      box-sizing: border-box;
+    }
+
+    .upperabout {
+      flex: 1;
+      display: flex;
+      align-items: stretch;
+
+      .upper-left {
+        flex: 6;
+
+        .upperavatar {
+          height: 100%;
+          background: #eee;
+
+          img {
+            width: 100%;
+            object-fit: fill;
+          }
+        }
+      }
+
+      .upper-right {
+        flex: 5;
+        background: #aaa;
+
+        .upperinfo {
+          h2 {
+            font-size: 2vw;
+            font-weight: bold;
+            line-height: 3vw;
+          }
+
+          p {
+            font-size: 1.3vw;
+          }
+
+          padding: 1.5rem 2rem 1.5rem 1.5rem;
+        }
+      }
+    }
+
+    .lowerabout {
+      flex: 1;
+      padding: 2rem 1.5rem;
+
+      h1 {
+        font-size: 2vw;
+        font-weight: bold;
+      }
+
+      .lowercards {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+
+        .card {
+          flex: 1 1 auto;
+          display: flex;
+
+          i {
+            flex: 1;
+            min-height: 4rem;
+            min-width: 4rem;
+          }
+
+          .card-info {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+
+            .cardheader {
+              flex: 1;
+              font-size: 1.8vw;
+              line-height: 4vw;
+              white-space: nowrap;
+            }
+
+            .cardcontent {
+              flex: 3;
+              font-size: 1.3vw;
+            }
+          }
+        }
+      }
+
+      .moredetail {
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+          text-decoration: none;
+          color: black;
+          font-size: max(14px, 1vw);
+        }
+      }
+    }
+
+    .pricing {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      align-items: center;
+      height: 100%;
+
+      .price {
+        //flex: 2;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+
+        background: silver;
+
+        .price-name {
+          flex: 1;
+          padding: 1rem;
+          font-size: 2.5vw;
+          text-align: center;
+        }
+
+        .price-value {
+          flex: 1;
+          text-align: center;
+        }
+
+        .price-desc {
+          flex: 4;
+          padding: 1rem 2rem;
+
+          ul {
+            list-style-type: square;
+          }
+        }
+
+        .buy {
+          flex: 1;
+
+          button {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: orange;
+          }
+        }
+      }
+
+      .hot {
+        //flex: 3;
+        height: 100%;
+      }
+    }
+
+    #contact-img {
+      width: 15vw;
+      border-radius: 50%;
+      margin: 3rem auto 1rem;
+    }
+
+    #contact-name {
+      margin: 0 auto;
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+
+    .contact-box {
+      display: flex;
+      flex-direction: column;
+      margin: 2rem auto;
+
+      .contact-field {
+        display: flex;
+        justify-content: flex-end;
+        width: 30vw;
+
+        .field-name {
+          margin-right: auto;
+          background: silver;
+          padding: 0.3rem;
+        }
+
+        .field-value {
+          margin: auto 0;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    .sidebar {
+      .infobox {
+        img {
+          border-radius: 50%;
+        }
+
+        h2 {
+          font-size: 4vw;
+          line-height: 4.2vw;
+        }
+
+        p {
+          font-size: 2.5vw;
+          line-height: 4vw;
+        }
+      }
+
+      .menu {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin: 0 3rem;
+
+        .tab {
+          .tab-text {
+            width: 100%;
+            overflow: hidden;
+
+            p {
+              //white-space: nowrap;
+              font-size: 2.2vw;
+            }
+          }
+        }
+      }
+
+      .copyright {
+        display: none;
+      }
+    }
+
+    .content {
+      .pricing {
+        display: flex;
+        flex-direction: column;
+
+        .price {
+          width: 90%;
+
+          button {
+            line-height: 2.5rem;
+          }
+        }
+      }
+
+      .upperabout {
+        flex-direction: column;
+        align-items: flex-start;
+        background: #aaa;
+
+        .upper-left {
+          width: 30%;
+          padding: 1.5rem 0 0 1.5rem;
+        }
+
+        .upper-right {
+          flex: auto;
+
+          .upperinfo {
+            padding-top: 1rem;
+
+            h2 {
+              font-size: 4vw;
+              line-height: 5vw;
+            }
+
+            p {
+              font-size: 2.6vw;
+            }
+          }
+        }
+      }
+
+      .lowerabout {
+        h1 {
+          font-size: 4vw;
+        }
+
+        .lowercards {
+          flex-direction: column;
+          gap: 1.7rem;
+
+          .card {
+            .card-info {
+              gap: 0.7rem;
+
+              .cardheader {
+                font-size: 4vw;
+                line-height: 5vw;
+              }
+
+              .cardcontent {
+                font-size: 3vw;
+              }
+            }
+          }
+        }
+      }
+
+      .contact-box {
+        .contact-field {
+          width: 50vw;
+        }
+      }
+    }
+  }
+}

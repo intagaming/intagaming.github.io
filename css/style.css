@@ -1,0 +1,326 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  width: 80vw;
+  height: 80vh;
+  margin: 10vh 10vw;
+  gap: 1vw;
+}
+.container .sidebar {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: #eee;
+  padding: 1rem;
+}
+.container .sidebar .infobox {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  text-align: center;
+  line-height: 1.3rem;
+  padding: 10px 0;
+  margin-bottom: 1rem;
+}
+.container .sidebar .infobox img {
+  width: 30%;
+  margin: 0 auto;
+}
+.container .sidebar .infobox h2 {
+  padding-top: 0.8rem;
+  font-size: 1.7vw;
+  line-height: 2vw;
+}
+.container .sidebar .infobox p {
+  font-size: 1.3vw;
+  line-height: 2vw;
+}
+.container .sidebar .menu {
+  flex: 5;
+  display: grid;
+  padding: 0 1.4vw;
+  grid-template-columns: 1fr 1fr;
+  align-self: center;
+}
+.container .sidebar .menu .tab {
+  text-align: center;
+  margin: auto;
+}
+.container .sidebar .menu .tab a {
+  text-decoration: none;
+  color: black;
+}
+.container .sidebar .menu .tab .tab-icon {
+  margin: auto;
+  font-size: 4vh;
+  padding: 0.3rem 1rem;
+}
+.container .sidebar .menu .tab p {
+  padding-top: 0.3rem;
+  font-size: 1.2vw;
+}
+.container .sidebar .menu .tab-icon {
+  opacity: 33%;
+}
+.container .sidebar .menu .active .tab-icon {
+  opacity: 100%;
+}
+.container .sidebar .copyright {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2vw;
+}
+.container .content {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+.container .content div {
+  box-sizing: border-box;
+}
+.container .content .upperabout {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+}
+.container .content .upperabout .upper-left {
+  flex: 6;
+}
+.container .content .upperabout .upper-left .upperavatar {
+  height: 100%;
+  background: #eee;
+}
+.container .content .upperabout .upper-left .upperavatar img {
+  width: 100%;
+  object-fit: fill;
+}
+.container .content .upperabout .upper-right {
+  flex: 5;
+  background: #aaa;
+}
+.container .content .upperabout .upper-right .upperinfo {
+  padding: 1.5rem 2rem 1.5rem 1.5rem;
+}
+.container .content .upperabout .upper-right .upperinfo h2 {
+  font-size: 2vw;
+  font-weight: bold;
+  line-height: 3vw;
+}
+.container .content .upperabout .upper-right .upperinfo p {
+  font-size: 1.3vw;
+}
+.container .content .lowerabout {
+  flex: 1;
+  padding: 2rem 1.5rem;
+}
+.container .content .lowerabout h1 {
+  font-size: 2vw;
+  font-weight: bold;
+}
+.container .content .lowerabout .lowercards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+.container .content .lowerabout .lowercards .card {
+  flex: 1 1 auto;
+  display: flex;
+}
+.container .content .lowerabout .lowercards .card i {
+  flex: 1;
+  min-height: 4rem;
+  min-width: 4rem;
+}
+.container .content .lowerabout .lowercards .card .card-info {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+.container .content .lowerabout .lowercards .card .card-info .cardheader {
+  flex: 1;
+  font-size: 1.8vw;
+  line-height: 4vw;
+  white-space: nowrap;
+}
+.container .content .lowerabout .lowercards .card .card-info .cardcontent {
+  flex: 3;
+  font-size: 1.3vw;
+}
+.container .content .lowerabout .moredetail {
+  display: flex;
+  justify-content: flex-end;
+}
+.container .content .lowerabout .moredetail a {
+  text-decoration: none;
+  color: black;
+  font-size: max(14px, 1vw);
+}
+.container .content .pricing {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+  height: 100%;
+}
+.container .content .pricing .price {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  background: silver;
+}
+.container .content .pricing .price .price-name {
+  flex: 1;
+  padding: 1rem;
+  font-size: 2.5vw;
+  text-align: center;
+}
+.container .content .pricing .price .price-value {
+  flex: 1;
+  text-align: center;
+}
+.container .content .pricing .price .price-desc {
+  flex: 4;
+  padding: 1rem 2rem;
+}
+.container .content .pricing .price .price-desc ul {
+  list-style-type: square;
+}
+.container .content .pricing .price .buy {
+  flex: 1;
+}
+.container .content .pricing .price .buy button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: orange;
+}
+.container .content .pricing .hot {
+  height: 100%;
+}
+.container .content #contact-img {
+  width: 15vw;
+  border-radius: 50%;
+  margin: 3rem auto 1rem;
+}
+.container .content #contact-name {
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.container .content .contact-box {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+}
+.container .content .contact-box .contact-field {
+  display: flex;
+  justify-content: flex-end;
+  width: 30vw;
+}
+.container .content .contact-box .contact-field .field-name {
+  margin-right: auto;
+  background: silver;
+  padding: 0.3rem;
+}
+.container .content .contact-box .contact-field .field-value {
+  margin: auto 0;
+}
+
+@media all and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .container .sidebar .infobox img {
+    border-radius: 50%;
+  }
+  .container .sidebar .infobox h2 {
+    font-size: 4vw;
+    line-height: 4.2vw;
+  }
+  .container .sidebar .infobox p {
+    font-size: 2.5vw;
+    line-height: 4vw;
+  }
+  .container .sidebar .menu {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0 3rem;
+  }
+  .container .sidebar .menu .tab .tab-text {
+    width: 100%;
+    overflow: hidden;
+  }
+  .container .sidebar .menu .tab .tab-text p {
+    font-size: 2.2vw;
+  }
+  .container .sidebar .copyright {
+    display: none;
+  }
+  .container .content .pricing {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .content .pricing .price {
+    width: 90%;
+  }
+  .container .content .pricing .price button {
+    line-height: 2.5rem;
+  }
+  .container .content .upperabout {
+    flex-direction: column;
+    align-items: flex-start;
+    background: #aaa;
+  }
+  .container .content .upperabout .upper-left {
+    width: 30%;
+    padding: 1.5rem 0 0 1.5rem;
+  }
+  .container .content .upperabout .upper-right {
+    flex: auto;
+  }
+  .container .content .upperabout .upper-right .upperinfo {
+    padding-top: 1rem;
+  }
+  .container .content .upperabout .upper-right .upperinfo h2 {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+  .container .content .upperabout .upper-right .upperinfo p {
+    font-size: 2.6vw;
+  }
+  .container .content .lowerabout h1 {
+    font-size: 4vw;
+  }
+  .container .content .lowerabout .lowercards {
+    flex-direction: column;
+    gap: 1.7rem;
+  }
+  .container .content .lowerabout .lowercards .card .card-info {
+    gap: 0.7rem;
+  }
+  .container .content .lowerabout .lowercards .card .card-info .cardheader {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+  .container .content .lowerabout .lowercards .card .card-info .cardcontent {
+    font-size: 3vw;
+  }
+  .container .content .contact-box .contact-field {
+    width: 50vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
